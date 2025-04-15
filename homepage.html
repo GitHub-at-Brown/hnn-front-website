@@ -171,14 +171,14 @@
                             </div>
                         </div>
                         <div class="card" data-popup="popup6">
-                            <div class="image" style="background-image: url('https://raw.githubusercontent.com/jonescompneurolab/jones-website/master/images/frontpage/content-images/beta-events.png');">
+                            <div class="image" style="background-image: url('https://raw.githubusercontent.com/jonescompneurolab/jones-website/master/images/frontpage/content-images/hnn-template-model.png');">
                             </div>
                             <div class="overlay">
                                 <h1>
-                                    Multi-Scale Validation
+                                    Model Validation
                                 </h1>
                                 <p>
-                                    Verily convinced 😊
+                                  HNN's foundational neocortical column model, referred to as the HNN Template Model, is a tuned implementation of the computational model in (Jones et al. 2007).
                                 </p>
                             </div>
                         </div>
@@ -341,9 +341,27 @@
                                 </button>
                             </div>
                             <h2>
-                                Multi-Scale Validation
+                                Model Validation
                             </h2>
                             <p>
+                              HNN's foundational neocortical column model, referred to as the HNN Template Model (shown below), is a tuned implementation of the computational model in
+                              <a href="https://doi.org/10.1523%2FJNEUROSCI.0482-07.2007">
+                                (Jones et al. 2007)
+                              </a>
+                              [TODO confirm with steph, is it a tuned version or the effectively the same?].
+                              This model was developed based on canonical principles of neocortical circuitry and contains the minimal circuit elements necessary for generating primary current dipoles and connecting dipole output to layer- and cell-specific neocortical activity.
+                              <br/>
+                              <br/>
+                              <img alt="HNN Template model" src="https://raw.githubusercontent.com/jonescompneurolab/jones-website/master/images/frontpage/content-images/hnn-template-model.png"/>
+                              <br/>
+                              Building HNN allowed us to test if the cell and network elements thought to be the primary generators of ERPs, alpha rhythms, beta rhythms, gamma rhythms, and other activity could produce macro-scale current dipole signals that were in agreement with our recorded data. While the literature guided us to a starting point that constrained the investigation, the exact parameters to use were unknown. By directly comparing the current dipole output of the model to source-localized experimental data, we were able to titrate parameters (both through hand-tuning and algorithmic parameter estimation) to produce a close fit to the source waveform (i.e. using small root mean squared error (RMSE)). Once a close fit to the current dipole waveform was established, the model provided a number of testable predictions on the underlying cell and circuit activity, e.g. exogenous input timing and strength, cell spiking activity, LFP/CSD, etc.
+                              <br/>
+                              <br/>
+                              For more detail on how our Template model was validated, see the
+                              <a href="https://dylansdaniels.github.io/website_redesign/content/03_model_assumptions/cortical_column_structure.html">Model Assumptions</a>
+                              section of our HNN Textbook. For publications that have used our model, see
+                              <a href="https://hnn.brown.edu/publications/">our Publications page</a>.
+
                             </p>
                         </div>
                     </div>
