@@ -164,7 +164,7 @@
                                     Fitting to Data
                                     <h1>
                                         <p>
-                                            Big wow 😮
+                                          HNN provides two ways to fit its pre-tuned neural models to your experimental data: Hand-Tuning and Optimization.
                                         </p>
                                     </h1>
                                 </h1>
@@ -330,6 +330,20 @@
                                 Fitting to Data
                             </h2>
                             <p>
+                              HNN provides two ways to fit its pre-tuned neural models to your experimental data:
+                              <br/>
+                              <br/>
+                              <b>Hand-tuning</b>: With both the GUI and API, HNN provides all the tools needed for rapidly changing and iterating simulated model parameters, enabling users to form hypotheses about their experimental data. HNN is especially powerful for understanding how external drives to the network impact the network and its outputs, including the current dipole that comprises MEG/EEG signals. Manually exploring the simulated parameter space helps users to either test or generate hypotheses tied to specific biological processes, such as statistical changes to inputs, E/I balance, between-layer communication, and anything else.
+                              <br/>
+                              <br/>
+                              <b>Optimization</b>: Given user-provided constraints, HNN can also minimize the root mean square error (RMSE) between a user-provided experimental dipole signal and multiple iterations of simulated dipole signals. Understanding which changes lead to a better match between simulated and experimental data may guide users to novel hypotheses of how the underlying biology works. HNN currently provides support for Bayesian and COBYLA optimization algorithms. See
+                              <a href="https://jonescompneurolab.github.io/hnn-core/stable/auto_examples/howto/optimize_evoked.html#sphx-glr-auto-examples-howto-optimize-evoked-py">
+                                our Optimization tutorials here
+                              </a>
+                              for how to get started using it.
+                              <br/>
+                              <br/>
+                              <img alt="Optimization examples" src="https://raw.githubusercontent.com/jonescompneurolab/jones-website/master/images/frontpage/content-images/fitting-to-data.png"/>
                             </p>
                         </div>
                     </div>
