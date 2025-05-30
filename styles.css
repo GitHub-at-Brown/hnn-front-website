@@ -500,7 +500,7 @@ code {
 
 /* Popup Container */
 .popup-container {
-    display: flex; /* hidden by default */
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
@@ -508,38 +508,46 @@ code {
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    align-items: center;
-    justify-content: center;
-
-    /* Initial state for transition */
-    opacity: 0; 
-    visibility: hidden; 
-    transition: opacity 0.3s ease, visibility 0s 0.3s; /* fade out */
 }
 
+/* Closed Popup State */
+.popup-container {
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+/* Open Popup State */
 .popup-container.show {
     opacity: 1; 
     visibility: visible;
-    transition: opacity 0.3s ease, visibility 0s 0s; /* fade in */
+    transition: opacity 0.3s ease, visibility 0s 0s;
 }
 
 /* Popup Box */
+/*
+    Notes:
+    border-box makes it such that width/height includes content area, padding, borders
+*/
+
 .popup-box {
-    /* border-box => width/height includes content area, padding, borders */
     box-sizing: border-box; 
-    margin-top: 90px;
+    margin-top: 80px;
     margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
     background: #fff;
     border-radius: 8px;
     padding: 20px 100px;
-    width: 100%;
+    width: 95%;
     max-width: calc(var(--content-max-width) + (var(--content-max-width) * 0.2));
     height: calc(100vh - 110px);
-    /* height: 100%; */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     position: relative;
     text-align: center;
-    overflow-y: auto; /* add scrolling */
+    overflow-y: auto;
 }
 
 .popup-box h2 {
@@ -551,8 +559,6 @@ code {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     text-align: justify !important;
     font-size: 20px !important;
-    /* padding-left: 100px !important; */
-    /* padding-right: 100px !important; */
     padding-bottom: 50px !important;
 }
 
@@ -563,7 +569,7 @@ code {
 }
 
 .popup-close-wrapper {
-    position: absolute;  /* Position it relative to the popup box */
+    position: absolute;
     top: 20px;
     left: 20px;
     z-index: 1001;
@@ -577,8 +583,6 @@ code {
     border-radius: 50%;
     width: 45px;
     height: 45px;
-    /* font-size: 18px; */
-    /* z-index: 2001; */
     cursor: pointer;
 }
 
@@ -596,6 +600,34 @@ code {
 
 body.dark-mode .popup-symbol:hover {
     fill: var(--light-purple);
+}
+
+/* 
+    Keep the scrollbar space reserved in the main .body
+    while prevent scrolling for page content behind the 
+    popup card.
+
+    Width 100% ensures the body doesn't shrink.
+*/
+body.lock-scroll {
+    overflow-y: scroll;
+    position: fixed;
+    width: 100%;
+    overscroll-behavior: contain;
+    z-index: 1000;
+}
+
+/* 
+    Keep the topbar in view when 'position: fixed' 
+    is applied to .body. Otherwise, the browser
+    treats .topbar (and all fixed descendants) as
+    fixed relative to the .body, not the viewport.
+*/
+body.lock-scroll .topbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
 }
 
 /* 
@@ -1275,7 +1307,7 @@ body.dark-mode #content .contact h3::after {
 */
 
 :root {
-    --content-max-width: 920px;
+    --content-max-width: 950px;
     --content-min-width: 650px;
     --topbar-height: 64px;
 }
