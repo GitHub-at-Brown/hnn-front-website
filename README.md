@@ -5,7 +5,7 @@ Current GitHub Pages rendered website can be found here: <https://github-at-brow
 
 ### Running scripts:
 
-Any scripts inside `scripts` can be run using the conda environment built for the HNN Textbook website here https://github.com/dylansdaniels/website_redesign , unless said otherwise in the script.
+Any scripts inside `scripts` can be run using the conda environment built for the HNN Textbook website here <https://github.com/jonescompneurolab/textbook>, unless said otherwise in the script.
 
 To run the "prettify" script, once you have activated your environment and you are at the top-level directory of this repository on your local machine, run the following:
 

@@ -24,7 +24,7 @@ topbar.outerHTML = `
                         <a href="https://jonescompneurolab.github.io/hnn-core/stable/install.html">
                             Install
                         </a>
-                        <a href="https://dylansdaniels.github.io/website_redesign/content/preface.html">
+                        <a href="https://jonescompneurolab.github.io/textbook/content/preface.html">
                             Tutorials
                         </a>
                         <a href="https://jonescompneurolab.github.io/hnn-core/stable/index.html">
@@ -90,7 +90,7 @@ topbar.outerHTML = `
                             <a href="https://jonescompneurolab.github.io/hnn-core/stable/install.html">
                                 Install
                             </a>
-                            <a href="https://dylansdaniels.github.io/website_redesign/content/preface.html">
+                            <a href="https://jonescompneurolab.github.io/textbook/content/preface.html">
                                 Tutorials
                             </a>
                             <a href="https://jonescompneurolab.github.io/hnn-core/stable/index.html">
