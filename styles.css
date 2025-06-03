@@ -7,6 +7,11 @@
 # -------------------- 
 */
 
+html {
+    scrollbar-gutter: stable overlay;
+    overflow-y: scroll;
+}
+
 body {
     /* font-family: "Lato", sans-serif; */
     font-family: 'Merriweather', Georgia, serif;
@@ -240,7 +245,7 @@ code {
     padding-left: 30px;
 }
 
-/* Dropdown styles */
+/* Style for "More" dropdown button */
 .dropdown {
     height: inherit;
     align-items: center;
@@ -260,15 +265,16 @@ code {
     justify-content: center;
     cursor: pointer;
     padding: 0px 10px;
-    border: 1px solid var(--light-gray);
-    border-radius: 3px;
-    transition: box-shadow 0.15s ease;
+    border: 2px solid var(--icon-base);
+    border-radius: 15px;
+    /* transition: box-shadow 0.3s ease; */
+    transition: box-shadow;
 }
 
 .dropdown-button:hover {
     /* border-color: var(--sidebar-purple); */
-    border: 1px solid var(--sidebar-purple);
-    box-shadow: 0 0 0 2px var(--sidebar-purple);
+    border: 2px solid var(--sidebar-purple);
+    box-shadow: 0 0 0 1px var(--sidebar-purple);
     
 }
 
@@ -496,46 +502,67 @@ code {
 
 /* Popup Container */
 .popup-container {
-    display: flex; /* hidden by default */
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    align-items: center;
-    justify-content: center;
-
-    /* Initial state for transition */
-    opacity: 0; 
-    visibility: hidden; 
-    transition: opacity 0.3s ease, visibility 0s 0.3s; /* fade out */
 }
 
+/* Closed Popup State */
+.popup-container {
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+/* Open Popup State */
 .popup-container.show {
     opacity: 1; 
     visibility: visible;
-    transition: opacity 0.3s ease, visibility 0s 0s; /* fade in */
+    transition: opacity 0.3s ease, visibility 0s 0s;
 }
 
 /* Popup Box */
+/*
+    Notes:
+    border-box makes it such that width/height includes content area, padding, borders
+*/
+
 .popup-box {
-    /* border-box => width/height includes content area, padding, borders */
     box-sizing: border-box; 
-    margin-top: 90px;
+    margin-top: 80px;
     margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
     background: #fff;
     border-radius: 8px;
-    padding: 20px;
-    width: 100%;
+    padding: 20px 100px;
+    width: 95%;
     max-width: calc(var(--content-max-width) + (var(--content-max-width) * 0.2));
     height: calc(100vh - 110px);
-    /* height: 100%; */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     position: relative;
     text-align: center;
-    overflow-y: auto; /* add scrolling */
+    overflow-y: auto;
+    transition: padding 0.3s ease;
+}
+
+/* Keep in sync with --content-min-width */
+@media (max-width: 660px) {
+    .popup-box {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+    .popup-symbol {
+        width: 30px !important;
+        height: 30px !important;
+    }
 }
 
 .popup-box h2 {
@@ -547,13 +574,17 @@ code {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     text-align: justify !important;
     font-size: 20px !important;
-    padding-left: 100px !important;
-    padding-right: 100px !important;
     padding-bottom: 50px !important;
 }
 
+.popup-box img {
+    display: block;
+    max-width: 95% !important;
+    height: auto;
+}
+
 .popup-close-wrapper {
-    position: absolute;  /* Position it relative to the popup box */
+    position: absolute;
     top: 20px;
     left: 20px;
     z-index: 1001;
@@ -562,18 +593,65 @@ code {
 /* Close Button */
 .popup-close {
     position: fixed;
-    background: #ccc;
+    background: none;
     border: none;
     border-radius: 50%;
-    width: 25px;
-    height: 25px;
-    font-size: 18px;
-    /* z-index: 2001; */
+    width: 45px;
+    height: 45px;
     cursor: pointer;
 }
 
-.popup-close:hover {
-    background: #aaa;
+.popup-symbol {
+    width: 42px;
+    height: 42px;
+    display: block;
+    margin: auto;
+    color: var(--light-purple);
+    --fill-color: #fff;
+    border-radius: 50%;
+    transition: width 0.3s ease, height 0.3s ease, padding 0.3s ease;
+    shape-rendering: auto;
+}
+
+body.dark-mode .popup-symbol {
+    color: var(--light-purple);
+    --fill-color: var(--sidebar-gray);
+}
+
+.popup-symbol:hover {
+    color: var(--icon-base);
+}
+
+body.dark-mode .popup-symbol:hover {
+    color: var(--light-gray);
+}
+
+/* 
+    Keep the scrollbar space reserved in the main .body
+    while prevent scrolling for page content behind the 
+    popup card.
+
+    Width 100% ensures the body doesn't shrink.
+*/
+body.lock-scroll {
+    /* overflow-y: scroll; */
+    position: fixed;
+    width: 100%;
+    overscroll-behavior: contain;
+    z-index: 1000;
+}
+
+/* 
+    Keep the topbar in view when 'position: fixed' 
+    is applied to .body. Otherwise, the browser
+    treats .topbar (and all fixed descendants) as
+    fixed relative to the .body, not the viewport.
+*/
+body.lock-scroll .topbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
 }
 
 /* 
@@ -604,6 +682,7 @@ code {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Dynamic columns, no empty space */
     gap: 10px; /* Space between cells */
+    width: 100%;
     max-width: 100%; /* Ensure it doesn't exceed the container width */
     justify-items: center; /* Ensures logos are centered within their cells */
 }
@@ -875,6 +954,12 @@ body.dark-mode #logo-subtitle img {
 }
 
 body.dark-mode .logo-container {
+    background-color:#fff;
+    border: 3px solid var(--light-gray);
+    border-radius: 6px
+}
+
+body.dark-mode .popup-box img {
     background-color:#fff;
     border: 3px solid var(--light-gray);
     border-radius: 6px
@@ -1246,8 +1331,8 @@ body.dark-mode #content .contact h3::after {
 */
 
 :root {
-    --content-max-width: 920px;
-    --content-min-width: 650px;
+    --content-max-width: 950px;
+    --content-min-width: 660px;
     --topbar-height: 64px;
 }
 

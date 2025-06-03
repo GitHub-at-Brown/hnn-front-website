@@ -163,12 +163,27 @@
                             </div>
                         </div>
                     </div>
-                    <!-- start popup containers -->
+
+                    <svg style="display: none;">
+                        <symbol id="popup-symbol" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="9" 
+                                fill="var(--fill-color, transparent)" 
+                                stroke="var(--stroke-color, currentColor)" 
+                                stroke-width="2" />
+                            <path d="M9 9L15 15M15 9L9 15" 
+                                stroke="var(--stroke-color, currentColor)" 
+                                stroke-width="2" 
+                                stroke-linecap="round" />
+                        </symbol>
+                    </svg>
+
                     <div class="popup-container" id="popup1">
                         <div class="popup-box">
                             <div class="popup-close-wrapper">
                                 <button class="popup-close">
-                                    ×
+                                    <svg class="popup-symbol" viewBox="0 0 512 512">
+                                        <use href="#popup-symbol"></use>
+                                    </svg>
                                 </button>
                             </div>
                             <h2>
@@ -187,9 +202,7 @@
                                 <br/>
                                 <br/>
                                 See our
-                                <a href="https://jonescompneurolab.github.io/textbook/content/preface.html">
-                                    HNN Textbook
-                                </a>
+                                <a href="https://jonescompneurolab.github.io/textbook/content/preface.html">HNN Textbook</a>
                                 to get started with HNN.
                             </p>
                         </div>
@@ -198,7 +211,9 @@
                         <div class="popup-box">
                             <div class="popup-close-wrapper">
                                 <button class="popup-close">
-                                    ×
+                                    <svg class="popup-symbol" viewBox="0 0 512 512">
+                                        <use href="#popup-symbol"></use>
+                                    </svg>
                                 </button>
                             </div>
                             <h2>
@@ -214,9 +229,7 @@
                                 <br/>
                                 <br/>
                                 To learn more, see the
-                                <a href="">
-                                    Biophysical Modeling
-                                </a>
+                                <a href="">Biophysical Modeling</a>
                                 section of our HNN Textbook
                             </p>
                         </div>
@@ -225,7 +238,9 @@
                         <div class="popup-box">
                             <div class="popup-close-wrapper">
                                 <button class="popup-close">
-                                    ×
+                                    <svg class="popup-symbol" viewBox="0 0 512 512">
+                                        <use href="#popup-symbol"></use>
+                                    </svg>
                                 </button>
                             </div>
                             <h2>
@@ -233,23 +248,16 @@
                             </h2>
                             <p>
                                 Our
-                                <a href="https://jonescompneurolab.github.io/textbook/content/preface.html">
-                                    HNN Textbook
-                                </a>
+                                <a href="https://jonescompneurolab.github.io/textbook/content/preface.html">HNN Textbook</a>
                                 is designed to teach users how to begin studying the origins of ERP and brain rhythms based on our previously-published studies. We provide data, initial parameter and network configurations, and workflows to teach users how to develop and test hypotheses on the neural origin of the most commonly recorded EEG/MEG signals, including event-related potentials (ERPs), Gamma Rhythms (30-80Hz), and low-frequency rhythms including Alpha (7-14Hz) and Beta Rhythms (15-29Hz).
                                 <br/>
                                 <br/>
                                 <img alt="Simulating Alpha/Beta" src="https://raw.githubusercontent.com/jonescompneurolab/jones-website/master/images/frontpage/content-images/AlphaAndBeta_Spect_plotonly.png"/>
                                 <br/>
                                 Our simulation examples follow a step-by-step process that serves as a guide on how you can use HNN to develop and test your own hypotheses on the biophysical origins of your recorded signals. You can find our
-                                <a href="https://jonescompneurolab.github.io/textbook/content/05_erps/hnn_core.html">
-                                    guide to simulating ERPs here
-                                </a>
+                                <a href="https://jonescompneurolab.github.io/textbook/content/05_erps/hnn_core.html">guide to simulating ERPs here</a>
                                 or our
-                                <a href="https://jonescompneurolab.github.io/textbook/content/06_alpha_beta/gui.html">
-                                    guide to simulating Alpha/Beta here
-                                </a>
-                                .
+                                <a href="https://jonescompneurolab.github.io/textbook/content/06_alpha_beta/gui.html">guide to simulating Alpha/Beta here</a>.
                             </p>
                         </div>
                     </div>
@@ -257,7 +265,9 @@
                         <div class="popup-box">
                             <div class="popup-close-wrapper">
                                 <button class="popup-close">
-                                    ×
+                                    <svg class="popup-symbol" viewBox="0 0 512 512">
+                                        <use href="#popup-symbol"></use>
+                                    </svg>
                                 </button>
                             </div>
                             <h2>
@@ -265,9 +275,7 @@
                             </h2>
                             <p>
                               HNN provides easy-to-use interfaces to a wide range of visualization and plotting capabilities across different dimensions and scales of your simulations. At the macro scale, we provide visualizations for simulated and experimental data such as the current dipoles that produce EEG and MEG signals. At the meso scale, we enable simulation and plotting of laminar LFP and CSD output, including the relative position of electrodes with respect to cells. At the micro scale (i.e., on the level of individual cells) we can plot spike rasters, compartmental voltage traces, intracellular state variables like calcium, and many different visualizations of synaptic network connectivity. We provide
-                                <a href="https://jonescompneurolab.github.io/hnn-core/stable/auto_examples/index.html">
-                                    many tutorials on how to use and visualize in HNN on our code website here.
-                                </a>
+                                <a href="https://jonescompneurolab.github.io/hnn-core/stable/auto_examples/index.html">many tutorials on how to use and visualize in HNN on our code website here</a>.
                             </p>
                             <img alt="Visualizations across multiple scales" src="https://raw.githubusercontent.com/jonescompneurolab/jones-website/master/images/frontpage/content-images/multi-scale-vis.png"/>
                         </div>
@@ -276,7 +284,9 @@
                         <div class="popup-box">
                             <div class="popup-close-wrapper">
                                 <button class="popup-close">
-                                    ×
+                                    <svg class="popup-symbol" viewBox="0 0 512 512">
+                                        <use href="#popup-symbol"></use>
+                                    </svg>
                                 </button>
                             </div>
                             <h2>
@@ -290,9 +300,7 @@
                               <br/>
                               <br/>
                               <b>Optimization</b>: Given user-provided constraints, HNN can also minimize the root mean square error (RMSE) between a user-provided experimental dipole signal and simulated dipole signals. Understanding which changes lead to a better match between simulated and experimental data will guide users to novel hypotheses of how the underlying biology works. HNN currently provides support for Bayesian and COBYLA optimization algorithms. See
-                              <a href="https://jonescompneurolab.github.io/hnn-core/stable/auto_examples/howto/optimize_evoked.html#sphx-glr-auto-examples-howto-optimize-evoked-py">
-                                our Optimization tutorials here
-                              </a>
+                              <a href="https://jonescompneurolab.github.io/hnn-core/stable/auto_examples/howto/optimize_evoked.html#sphx-glr-auto-examples-howto-optimize-evoked-py">our Optimization tutorials here</a>
                               for how to get started using it.
                               <br/>
                               <br/>
@@ -304,7 +312,9 @@
                         <div class="popup-box">
                             <div class="popup-close-wrapper">
                                 <button class="popup-close">
-                                    ×
+                                    <svg class="popup-symbol" viewBox="0 0 512 512">
+                                        <use href="#popup-symbol"></use>
+                                    </svg>
                                 </button>
                             </div>
                             <h2>
@@ -312,9 +322,7 @@
                             </h2>
                             <p>
                               HNN's foundational neocortical column model, referred to as the HNN Template Model (shown below), is a tuned implementation of the computational model in
-                              <a href="https://doi.org/10.1523%2FJNEUROSCI.0482-07.2007">
-                                (Jones et al. 2007)
-                              </a>
+                              <a href="https://doi.org/10.1523%2FJNEUROSCI.0482-07.2007">(Jones et al. 2007)</a>.
                               This model was developed based on canonical principles of neocortical circuitry and contains the minimal circuit elements necessary for generating primary current dipoles and connecting dipole output to layer- and cell-specific neocortical activity.
                               <br/>
                               <br/>
