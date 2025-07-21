@@ -21,7 +21,7 @@ topbar.outerHTML = `
                                 </svg>
                             </div>
                         </a>
-                        <a href="https://jonescompneurolab.github.io/hnn-core/stable/install.html">
+                        <a href="https://jonescompneurolab.github.io/textbook/content/01_getting_started/installation.html">
                             Install
                         </a>
                         <a href="https://jonescompneurolab.github.io/textbook/content/preface.html">
@@ -87,7 +87,7 @@ topbar.outerHTML = `
                             <a href="index.html" class="home-link">
                                 Home
                             </a>
-                            <a href="https://jonescompneurolab.github.io/hnn-core/stable/install.html">
+                            <a href="https://jonescompneurolab.github.io/textbook/content/01_getting_started/installation.html">
                                 Install
                             </a>
                             <a href="https://jonescompneurolab.github.io/textbook/content/preface.html">
