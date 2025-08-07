@@ -76,10 +76,11 @@ window.addEventListener('scroll', () => {
     document.querySelector('.topbar').style.transform = `translateX(${-scrollX}px)`;
 });
 
+// ------------------- //
+// --- Card Popups --- //
+// ------------------- //
+
 document.addEventListener('DOMContentLoaded', () => {
-    // ------------------- //
-    // --- Card Popups --- //
-    // ------------------- //
     const cards = document.querySelectorAll('.card');
     const popups = document.querySelectorAll('.popup-container');
 
@@ -87,58 +88,67 @@ document.addEventListener('DOMContentLoaded', () => {
     let _popupScrollY = 0;
 
     // Show popup on card click
+    function openPopup(popup) {
+        // Save scroll position
+        _popupScrollY = window.scrollY;
+        // Show popup
+        popup.classList.add('show');
+        // Lock background scroll for body and html
+        document.body.classList.add('lock-scroll');
+        document.documentElement.classList.add('lock-scroll');
+        // Reset popup scroll
+        const popupBox = popup.querySelector('.popup-box');
+        if (popupBox) {
+            popupBox.scrollTop = 0;
+        }
+    }
+
+    // Unlock scroll and hide popup
+    function closePopup(popup) {
+        // Hide popup
+        popup.classList.remove('show');
+        // Unlock background scroll for body and html
+        document.body.classList.remove('lock-scroll');
+        document.documentElement.classList.remove('lock-scroll');
+        // Restore scroll position
+        window.scrollTo(0, _popupScrollY);
+    }
+
+    // Attach click listeners to cards to open corresponding popups
     cards.forEach(card => {
         card.addEventListener('click', () => {
             const popupId = card.getAttribute('data-popup');
             const popup = document.getElementById(popupId);
-            if (popup) {
-                // Save scroll position
-                _popupScrollY = window.scrollY;
-                popup.classList.add('show'); // show popup
-                document.body.classList.add('lock-scroll'); // lock background scroll
-                document.documentElement.classList.add('lock-scroll');
-                // Reset popup scroll
-                const popupBox = popup.querySelector('.popup-box');
-                if (popupBox) {
-                    popupBox.scrollTop = 0;
-                }
-            }
+            if (popup) openPopup(popup);
         });
     });
 
-    // Close popup on close button click
+    // Attach click listeners to close buttons
     document.querySelectorAll('.popup-close').forEach(button => {
         button.addEventListener('click', () => {
             const popupContainer = button.closest('.popup-container');
-            if (popupContainer) {
-                popupContainer.classList.remove('show'); // hide popup
-                document.body.classList.remove('lock-scroll'); // unlock background scroll
-                document.documentElement.classList.remove('lock-scroll');
-                // Restore scroll position
-                window.scrollTo(0, _popupScrollY);
-            }
+            if (popupContainer) closePopup(popupContainer);
         });
     });
 
-    // Close popup on outside click
+    // Attach click listeners to popup backgrounds (outside click)
     popups.forEach(popup => {
-        popup.addEventListener('click', (e) => {
-            if (e.target === popup) {
-                popup.classList.remove('show');
-                document.body.classList.remove('lock-scroll'); // unlock background scroll
-                document.documentElement.classList.remove('lock-scroll');
-                // Restore scroll position
-                window.scrollTo(0, _popupScrollY);
-            }
+        popup.addEventListener('click', e => {
+            if (e.target === popup) closePopup(popup);
         });
     });
 
-    // Run once on load
-    adjustRightSpaceIfNoScrollbar();
-    // Run on resize (in case scrollbar appears/disappears)
-    window.addEventListener('resize', adjustRightSpaceIfNoScrollbar);
+    // Close popup when pressing escape key
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') {
+            popups.forEach(popup => {
+                if (popup.classList.contains('show')) {
+                    closePopup(popup);
+                }
+            });
+        }
+    });
 });
-
 
 
 // ----------------------- //
