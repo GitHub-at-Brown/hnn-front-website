@@ -10,6 +10,7 @@
 html {
     scrollbar-gutter: stable overlay;
     overflow-y: scroll;
+    min-width: var(--content-min-width);
 }
 
 body {
@@ -79,7 +80,7 @@ a:hover {
 #content-wrapper {
     width: 100%;
     max-width: var(--content-max-width);
-    padding: 0px 0px;
+    padding: 0px 15px;
     box-sizing: border-box;
     /* margin: 0 auto; */
     margin-top: var(--topbar-height);
@@ -378,25 +379,24 @@ code {
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Space between cards */
-    justify-content: space-between;
+    gap: 20px;
+    justify-content: center;
     max-width: 1200px;
-    margin: 0 auto; /* Center gallery */
-    padding: 20px 0px; /* Optional padding */
+    margin: 0 auto;
+    padding: 20px 0px;
 }
   
 /* Card */
 .card {
     position: relative;
     border-radius: 10px; 
-    /* round corners */
-    width: calc(33.333% - 20px); 
-    /* three cards per row with spacing */
-    max-width: 300px;
+    width: calc(33.333% - 20px);
+    /* ^ three cards per row with spacing */
+    max-width:  300px;
     height: 180px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    /* hides content (e.g., background) outside of card */
+    /* ^ hides content (e.g., background) outside of card */
     transition: transform 0.2s ease-in-out;
 }
   
@@ -506,7 +506,7 @@ code {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
     z-index: 1000;
@@ -545,7 +545,8 @@ code {
     padding: 20px 100px;
     width: 95%;
     max-width: calc(var(--content-max-width) + (var(--content-max-width) * 0.2));
-    height: calc(100vh - 110px);
+    /* height: calc(100vh - 110px); */
+    height: calc(100% - 110px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     position: relative;
     text-align: center;
@@ -633,12 +634,24 @@ body.dark-mode .popup-symbol:hover {
 
     Width 100% ensures the body doesn't shrink.
 */
+/*
 body.lock-scroll {
-    /* overflow-y: scroll; */
+    /* overflow-y: scroll; 
     position: fixed;
     width: 100%;
     overscroll-behavior: contain;
     z-index: 1000;
+} */
+
+/* Hide #content when popup is open */
+body.lock-scroll #content {
+    visibility: hidden;
+}
+
+body.lock-scroll,
+html.lock-scroll {
+    overflow: hidden !important;
+    /* height: 100% !important; */
 }
 
 /* 
