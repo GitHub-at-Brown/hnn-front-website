@@ -8,7 +8,7 @@
 */
 
 html {
-    scrollbar-gutter: stable overlay;
+    scrollbar-gutter: stable overlay !important;
     overflow-y: scroll;
     min-width: var(--content-min-width);
 }
@@ -648,10 +648,9 @@ body.lock-scroll #content {
     visibility: hidden;
 }
 
-body.lock-scroll,
-html.lock-scroll {
-    overflow: hidden !important;
-    /* height: 100% !important; */
+body.lock-scroll {
+    position: fixed;
+    width: 100%;
 }
 
 /* 
