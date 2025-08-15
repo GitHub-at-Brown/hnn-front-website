@@ -25,9 +25,6 @@ topbar.outerHTML = `
                             Install
                         </a>
                         <a href="https://jonescompneurolab.github.io/textbook/content/preface.html">
-                            Tutorials
-                        </a>
-                        <a href="https://jonescompneurolab.github.io/hnn-core/stable/index.html">
                             Documentation
                         </a>
                         <a href="contact.html">
@@ -91,9 +88,6 @@ topbar.outerHTML = `
                                 Install
                             </a>
                             <a href="https://jonescompneurolab.github.io/textbook/content/preface.html">
-                                Tutorials
-                            </a>
-                            <a href="https://jonescompneurolab.github.io/hnn-core/stable/index.html">
                                 Documentation
                             </a>
                             <a href="contact.html">
