@@ -7,7 +7,7 @@ topbar.outerHTML = `
                     </div>
                     <div class="links">
 
-                        <a href="index.html" class="home-link">
+                        <a href="index.html" class="home-link" aria-label="Go to homepage">
                             <div class="home-icon-container">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"

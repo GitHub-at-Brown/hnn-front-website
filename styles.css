@@ -179,7 +179,7 @@ code {
 
 /* Left links (Install, Tutorials, etc.) */
 .links a {
-    color: grey;
+    color: #757575;
     font-size: 17px;
     padding: 0px 10px;
     text-decoration: none;
