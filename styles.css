@@ -179,7 +179,7 @@ code {
 
 /* Left links (Install, Tutorials, etc.) */
 .links a {
-    color: grey;
+    color: #757575;
     font-size: 17px;
     padding: 0px 10px;
     text-decoration: none;
@@ -255,7 +255,7 @@ code {
     font-size: 17px;
     cursor: pointer;
     background: none;
-    color: grey;
+    color: #757575;
     margin: 0px 10px;
 }
 
