@@ -16,9 +16,9 @@
     <body>
         <div id="main" role="main">
             <div class="topbar"></div>
-            <!-- 
+            <!--
                 The "topbar" div above is replaced with the html in the "templates/topbar.js" script
-                Refer to "<script src="templates/topbar.js" defer>" in <head> 
+                Refer to "<script src="templates/topbar.js" defer>" in <head>
             -->
 
             <div id="content-wrapper">
@@ -28,77 +28,283 @@
                             Publications
                         </h2> -->
                         <h3>
-                            HNN Methods Paper
+                            HNN Methods Papers
                         </h3>
-                        <p>
-                            Neymotin SA, Daniels DS, Caldwell B, McDougal RA, Carnevale NT, Jas M, Moore CI, Hines ML, Hämäläinen M, Jones SR. Human Neocortical Neurosolver (HNN), a new software tool for interpreting the cellular and network origin of human MEG/EEG data (2020). eLife 2020;9:e51214 DOI: 10.7554/eLife.51214 (https://doi.org/10.7554/eLife.51214)
+
+                        <h4>
+                            <a href="https://dx.doi.org/10.3791/70618">A Protocol For Uncovering Neural Mechanisms Of Neurotherapeutic Effects On Electroencephalography Using The Human Neocortical Neurosolver</a>
+                        </h4>
+                        <p class="authors">
+                            Tolley N, Zhou DW, Soplata AE, Daniels DS, Duecker K, Pujol CF, Gao J, Jones SR. <i>J Vis Exp</i> (2026)
                         </p>
-                        
+                        <p>
+                            This is our most recent methods paper documenting how to use the optimization functionality of HNN-Core (including its GUI) in a realistic example on electroencephalography data.
+                        </p>
+
+
+                        <h4>
+                            <a href="https://doi.org/10.21105/joss.05848">HNN-core: A Python software for cellular and circuit-level interpretation of human MEG/EEG</a>
+                        </h4>
+                        <p class="authors">
+                            Jas M, Thorpe R, Tolley N, Bailey C, Brandt S, Caldwell B, Cheng H, Daniels DS, Pujol CF, Khalil M, Kanekar S, Kohl C, Kolozsvári O, Lankinen K, Loi K, Neymotin S, Partani R, Pelah M, Rockhill A, Sherif M, Hamaleinen M, Jones SR. <i>J Open Source Softw</i> (2023)
+                        </p>
+                        <p>
+                            This is the paper documenting the newer Python implementation of HNN, called HNN-Core, which is the current version of the software.
+                        </p>
+
+                        <h4>
+                            <a href="https://doi.org/10.7554/eLife.51214">Human Neocortical Neurosolver (HNN), a new software tool for interpreting the cellular and network origin of human MEG/EEG data</a>
+                        </h4>
+                        <p class="authors">
+                            Neymotin SA, Daniels DS, Caldwell B, McDougal RA, Carnevale NT, Jas M, Moore CI, Hines ML, Hämäläinen M, Jones SR. <i>eLife</i> (2020)
+                        </p>
+                        <p>
+                            This is the original paper describing both the network model adapted from (Jones et al., 2009) and the first software version of HNN.
+                        </p>
+
                         <h3>
                             Evoked Responses
                         </h3>
-                        <p>
-                            Law RG, Pugliese S, Shin H, Sliva DD, Lee S, Neymotin S, Moore C, Jones SR. Thalamocortical Mechanisms Regulating the Relationship between Transient Beta Events and Human Tactile Perception. Cereb Cortex. 2022 Feb 8;32(4):668-688. doi: 10.1093/cercor/bhab221. PMID: 34401898; PMCID: PMC8841599.
+
+                        <!---->
+
+                        <h4>
+                            <a href="https://doi.org/10.1101/2025.11.08.687373 ">Neurophysiology of mismatch negativity generation: a biophysical modeling study</a>
+                        </h4>
+                        <p class="authors">
+                            Pujol CF, Bruce J, Thorpe RV, Jones SR, Dykstra AR. <i>bioRxiv</i> (2025)
                         </p>
                         <p>
-                            Kohl C, Parviainen T, Jones SR (2021) Neural Mechanisms Underlying Human Auditory Evoked Responses Revealed By Human Neocortical Neurosolver Brain Topogr. Apr 19. Doi: 10.1007/s10548-021-00838-0
+                            <i><b>What are the cellular and circuit mechanisms underlying deviance detection and mismatch negativity (MMN) generation in human auditory cortex? </i></b> Using MEG and biophysical modeling of an auditory oddball paradigm, Fernandez Pujol et al. showed that the standard response can be explained by a feedforward-feedback sequence, whereas the MMN requires increased L2/3 NMDA conductance together with a second, delayed distal input to L2/3 and L5 pyramidal neurons and L2/3 inhibitory neurons. The results suggest that MMN generation involves both supragranular and infragranular circuitry and is consistent with an additional input from the non-lemniscal thalamus, challenging models that attribute MMN generation primarily to L2/3 mechanisms.
+                        </p>
+
+                        <!---->
+
+                        <h4>
+                            <a href="https://www.jneurosci.org/content/44/20/e2016232024">Biophysical modeling of frontocentral ERP generation links circuit-level mechanisms of action-stopping to a behavioral race model</a>
+                        </h4>
+                        <p class="authors">
+                            Diesburg DA, Wessel JR, Jones SR. <i>Journal of Neuroscience</i> (2024)
                         </p>
                         <p>
-                            Sliva DD, Black CJ, Bowary P. Agrawal U, Santoyo JF, Philip N, Greenberg, BD, Moore CI, Jones SR (2018) A prospective study of the impact of transcranial alternating current stimulation on EEG correlates of somatosensory perception, Front. Psych. Nov 20;9:2117. doi: 10.3389/fpsyg.2018.02117
+                            <i><b>What are the thalamocortical mechanisms that can lead to the frontocentral scalp EEG evoked responses observed during inhibitory control in the Stop Signal Task (SST)? </i></b> By modeling the response in HNN, Diesburg et al. observed that a canonical sequence of feedforward, feedback, and re-emergent feedforward thalamocortical drives could recreate the Stop-Signal FC-ERP, including its characteristic P2, N2, and P3 deflections. To link these mechanisms with downstream behavior, they predicted the mechanisms that lead to condition differences in these ERPs between successful and unsuccessful stops.
+                        </p>
+
+                        <!---->
+
+                        <h4>
+                            <a href="https://www.jneurosci.org/content/44/17/e1119232024">Neuronal modeling of cross-sensory visual evoked magnetoencephalography responses in the auditory cortex</a>
+                        </h4>
+                        <p class="authors">
+                            Lankinen K, Ahveninen J, Jas M, Raij T, Ahlfors SP. <i>Journal of Neuroscience</i> (2024)
                         </p>
                         <p>
-                            Pinotsis DA, Geerts JP, Pinto L, FitzGerald T, Litvak V, Auksztulewicz R, Friston, KJ. (2017). Linking canonical microcircuits and neuronal activity: Dynamic causal modelling of laminar recordings. NeuroImage, 146, 355–366. doi:10.1016/j.neuroimage.2016.11.041
+                            <i><b>What types of exogenous input are associated with cross-sensory visual evoked activity in the auditory cortex? </i></b>Lankinen et al. used HNN to show that auditory cortex response can be explained by feedforward and feedback input, whereas the cross-sensory visual response can be explained by feedback input alone.
+                        </p>
+
+                        <!---->
+
+                        <h4>
+                            <a href="https://direct.mit.edu/imag/article/doi/10.1162/imag_a_00095/119419/Distinct-neocortical-mechanisms-underlie-human-SI">Distinct neocortical mechanisms underlie human SI responses to median nerve and laser-evoked peripheral activation</a>
+                        </h4>
+                        <p class="authors">
+                            Thorpe RV, Black CJ, Borton DA, Hu L, Saab CY, Jones SR. <i>Imaging Neuroscience</i> (2024)
                         </p>
                         <p>
-                            Ziegler DA, Pritchett DL, Hosseini-V. P, Corkin S, Hamalainen MS, Moore CI, Jones SR. (2010) Transformations in oscillatory activity and evoked responses in primary somatosensory cortex in middle age: A combined comput. neur. modeling & MEG study. Neuroimage; 52(3):897:912.
+                            <i><b>What are the cell and circuit mechanisms underlying responses to innocuous electrical median nerve (MN) stimulation? Do they differ from those evoked by noxious cutaneous laser-evoked (LE) stimulation? If so, how? </i></b> Thorpe et al. showed that MN and LE responses have distinct waveform characteristics. Using HNN to simulate the responses, they showed MN responses could be generated by a sequence of thalamocortical drives, similar to the tactile evoked response, with the addition of an early excitatory supragranular input. The LE response began with a feedback drive consisting of a burst of gamma-frequency excitatory supragranular input that generated the downward current flow and the initial negative peak of the LE response.
+                        </p>
+
+                        <!---->
+
+                        <h4>
+                            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10337981/">Laminar specificity of the auditory perceptual awareness negativity: A biophysical modeling study</a>
+                        </h4>
+                        <p class="authors">
+                            Pujol CF, Blundon EG, Dykstra AR. <i>PLoS Comput Biol</i> (2023)
                         </p>
                         <p>
-                            Jones SR, Pritchett DL, Stufflebeam SM, Sikora M, Hamalainen MS, Moore CI. (2009) Quantitative analysis and biophysically-realistic modeling of the MEG mu rhythm: rhythmogenesis and modulation of sensory evoked responses. J. of Neurophys; 102(6):3554-72.
+                            <i><b>What are the cell and circuit mechanisms of the auditory awareness negativity (AAN), an evoked response associated with perception of target sounds in noise? </i></b> Fernandez Pujol et al. used HNN to bridge human EEG and invasive animal models, showing that AAN can be accounted for by synaptic input to the supragranular layers of auditory cortex presumed to arise from cortico-cortical feedback and/or non-lemniscal thalamic projections.
+                        </p>
+
+                        <!---->
+
+                        <h4>
+                            <a href="https://pubmed.ncbi.nlm.nih.gov/34401898/">Thalamocortical mechanisms regulating the relationship between transient beta events and human tactile perception</a>
+                        </h4>
+                        <p class="authors">
+                            Law RG, Pugliese S, Shin H, Sliva DD, Lee S, Neymotin S, Moore C, Jones SR. <i>Cereb Cortex</i> (2022)
                         </p>
                         <p>
-                            Jones SR, Pritchett DL, Stufflebeam SM, Hamalainen, M, Moore CI. (2007) Neural correlates of tactile detection: A combined MEG and biophysically based computational modeling study. Journal of Neurosci.; 27(40):10751-10764.
+                            <i><b>How do transient prestimulus beta events impact tactile evoked responses and inhibit perception?</i></b> Law et al. used HNN to predict that beta events recruit slow GABAb supragranular inhibition that suppresses sensory information for 300 ms post event. However, they further predicted that beta events occurring simultaneously with tactile stimulation can facilitate sensory perception.
                         </p>
-                        
+
+                        <!---->
+
+                        <h4>
+                            <a href="https://pubmed.ncbi.nlm.nih.gov/33876329/">Neural mechanisms underlying human auditory evoked responses revealed by Human Neocortical Neurosolver</a>
+                        </h4>
+                        <p class="authors">
+                            Kohl C, Parviainen T, Jones SR. <i>Brain Topogr</i> (2021)
+                        </p>
+                        <p>
+                            <i><b>What are the cell and circuit mechanisms creating auditory evoked responses (AEPs), and how do they differ across hemispheres?</i></b> Kohl et al. used HNN to show that AEPs in primary auditory cortex induced by brief tones can be produced from a sequence of thalamocortical drives to the A1 circuit, and that hemispheric differences emerge from changes in the parameters of this drive.
+                        </p>
+
+                        <!---->
+                        <h4>
+                        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2804421/">Quantitative analysis and biophysically-realistic modeling of the MEG mu rhythm: rhythmogenesis and modulation of sensory evoked responses</a>
+                        </h4>
+                        <p class="authors">
+                            Jones SR, Pritchett DL, Sikora M, Stufflebeam SM, Hamalainen MS, Moore CI. <i>J Neurophysiol</i> (2009)
+                        </p>
+                        <p>
+                            <i><b>What are the cell and circuit mechanisms underlying the generation of the mu rhythm from primary somatosensory cortex?</i></b> Jones et al. developed and used HNN's foundational neocortical neural modeling framework to study the emergence of the alpha (7-14Hz) and beta (15-29Hz) components of MEG measured spontaneous somatosensory mu rhythms. They first showed that the alpha and beta components emerged transiently in unaveraged data. Using modeling, they showed that stochastic 10Hz bursts of drive that activated the network nearly simultaneously through feedforward (proximal) and feedback (distal) connection pathways, and presumed to come from thalamic sources, could generate quantified features of the recorded rhythm. They also used the model to study the impact of high prestimulus mu power on SI-evoked activity.
+                        </p>
+
+
+                        <!---->
+
+
+                        <h4>
+                        <a href="https://www.jneurosci.org/content/27/40/10751">Neural correlates of tactile detection: A combined magnetoencephalography and biophysically based computational modeling study.</a>
+                        </h4>
+                        <p class="authors">
+                            Jones SR, Pritchett DL, Stufflebeam SM, Hamalainen, M, Moore CI. <i>Journal of Neuroscience</i> (2007)
+                        </p>
+                        <p>
+                            <i><b>What are the cell and circuit mechanisms underlying tactile evoked responses (ERPs) from human primary somatosensory cortex (SI)? How do those mechanisms change to account for observed correlates of tactile detection? </i></b>Jones et al. developed and used HNN's foundational neocortical neural modeling framework to show that tactile ERPs could be generated by a sequence of feedforward and feedback thalamocortical drive, which was motivated by and consistent with prior animal studies. They further showed that changes to the timing and strength of the drive could reproduce observed ERP correlates of tactile detection, such that the exogneous drives were earlier and stronger on detected trials.
+                        </p>
+
+                        <!---->
+
+
                         <h3>
                             Brain Rhythms
                         </h3>
-                        <p>
-                            James J Bonaiuto, Simon Little, Samuel A Neymotin, Stephanie R Jones, Gareth R Barnes, Sven Bestmann.Laminar dynamics of high amplitude beta bursts in human motor cortex. NeuroImage, Volume 242, 2021, 118479, ISSN 1053-8119; doi: https://doi.org/10.1016/j.neuroimage.2021.118479.
+
+                        <!---->
+
+                        <h4>
+                        <a href="https://www.sciencedirect.com/science/article/pii/S0301008223000916">Diverse beta burst waveform motifs characterize movement-related cortical dynamics</a>
+                        </h4>
+                        <p class="authors">
+                            Szul MJ, Papadopoulos S, Alavizadeh S, Daligaut S, Schwartz D, Mattout J, Bonaiuto JJ. <i>Progress in Neurobiology</i> (2023)
                         </p>
                         <p>
-                            Robert G. Law, Sarah Pugliese, Hyeyoung Shin, Danielle D. Sliva, Shane Lee, Samuel Neymotin, Christopher Moore, Stephanie R. Jones. Thalamocortical mechanisms regulating the relationship between transient beta events and human tactile perception. bioRxiv 2021.04.16.440210; doi: https://doi.org/10.1101/2021.04.16.440210. In Press.
+                            <i><b>What are the cell and circuit mechanisms underlying the variability of beta event waveform shapes during movement? </i></b> Szul et al. used HNN to test  how the variability of synaptic inputs contributes to variability in the beta burst waveform during movement, advancing understanding of the diverse roles of sensorimotor beta bursts.
+                        </p>
+
+                        <!---->
+
+                        <h4>
+                        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9269450/">Non-zero mean alpha oscillations revealed with computational model and empirical data</a>
+                        </h4>
+                        <p class="authors">
+                            Studenova AA, Villringer A, Nikulin VV. <i>PLoS Comput Biol</i> (2022)
                         </p>
                         <p>
-                            Pinotsis, D.A., Miller, E.K. Differences in visually induced MEG oscillations reflect differences in deep cortical layer activity. Commun Biol 3, 707 (2020). https://doi.org/10.1038/s42003-020-01438-7
+                            <i><b>What is the relationship between ongoing oscillations and evoked responses? </i></b>Studenova et al. used EEG data analysis and HNN modeling to show that human alpha oscillations have a nonzero mean, predicting that amplitude modulation of neural oscillations may partially explain the generation of evoked responses.
+                        </p>
+
+                        <!---->
+
+                        <h4>
+                        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8463839/">Laminar dynamics of high amplitude beta bursts in human motor cortex</a>
+                        </h4>
+                        <p class="authors">
+                            Bonaiuto JJ, Little S, Neymotin SA, Jones SR, Barnes GR, Bestmann S. <i>NeuroImage</i> (2021)
                         </p>
                         <p>
-                            Pinotsis DA, Geerts JP, Pinto L, FitzGerald T, Litvak V, Auksztulewicz R, Friston, KJ. (2017). Linking canonical microcircuits and neuronal activity: Dynamic causal modelling of laminar recordings. NeuroImage, 146, 355–366. doi:10.1016/j.neuroimage.2016.11.041
+                            <i><b>What are the cell and circuit mechanisms underlying high-amplitude beta events/bursts in human motor cortex? </i></b> Bonaiuto et al. combined temporally resolved laminar inverse analysis and HNN modeling to test the theory that beta events/bursts in the human motor cortex can arise from similar mechanisms as those previously predicted for somatosensory cortex (Sherman et al. 2016). They found nearly synchronous deep and superficial layer excitatory synaptic drives occurs during beta events/bursts, suggesting a conserved mechanism for somatosensory and motor cortical beta bursts.
+                        </p>
+
+                        <!---->
+
+                        <h4>
+                        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5312791/">Linking canonical microcircuits and neuronal activity: Dynamic causal modelling of laminar recordings</a>
+                        </h4>
+                        <p class="authors">
+                            Pinotsis DA, Geerts JP, Pinto L, FitzGerald THB, Litvak V, Auksztulewicz R, Friston, KJ. <i>NeuroImage</i> (2017)
                         </p>
                         <p>
-                            Sherman M, Lee S, Law R, Haegens S, Thorn C, Hamalainen M, Moore CI, Jones SR. (2016) Neural mechanisms of transient neocortical beta rhythms: Converging evidence from humans, computational modeling, monkeys, and mice. Proc. Natl. Acad. Sci.; 113(33):E4885-94
+                            <i><b>How can mesoscale and microscale neural models be combined to provide insight into intralaminar neural activity?</i></b> Pinotsis et al. fit a neural mass model to data generated by the HNN compartmental model, and the resulting model is able to distinguish between activity in distinct cortical layers with and without optogenetic activation.
+
+                        </p>
+
+                        <!---->
+
+                        <h4>
+                        <a href="https://www.pnas.org/doi/10.1073/pnas.1604135113">Neural mechanisms of transient neocortical beta rhythms: Converging evidence from humans, computational modeling, monkeys, and mice</a>
+                        </h4>
+                        <p class="authors">
+                            Sherman M, Lee S, Law R, Haegens S, Thorn C, Hamalainen M, Moore CI, Jones SR. <i>PNAS</i> (2016)
                         </p>
                         <p>
-                            Lee S and Jones SR. (2013) Distinguishing mechanisms of gamma frequency oscillations in human current source signals using a computational model of a laminar neocortical network. Frontiers in Human Neurosci.; Dec 18; 867:869
+                            <i><b>Are features of transient 15-29Hz beta rhythms (i.e. beta events/bursts) conserved across species and brain areas? What are the cell and circuit mechanisms generating beta events? </i></b> Sherman et al. uses converging evidence from MEG, HNN modeling, and laminar recordings to propose a new theory on the generation of transient beta events, showing they can emerge from the nearly simultaneous integration of bursts of excitatory synaptic drive targeting proximal and distal dendrites of neocortical pyramidal neurons, such that the distal drive is stronger and lasts ~50ms.
+
+                        </p>
+
+                        <!---->
+
+                        <h4>
+                        <a href="https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2013.00869/full">Distinguishing mechanisms of gamma frequency oscillations in human current source signals using a computational model of a laminar neocortical network</a>
+                        </h4>
+                        <p class="authors">
+                            Lee S and Jones SR. <i>Front Hum Neurosci</i> (2013)
                         </p>
                         <p>
-                            Ziegler DA, Pritchett DL, Hosseini-V. P, Corkin S, Hamalainen MS, Moore CI, Jones SR. (2010) Transformations in oscillatory activity and evoked responses in primary somatosensory cortex in middle age: A combined comput. neur. modeling & MEG study. Neuroimage; 52(3):897:912.
+                            <i><b>How might well-known cell and circuit mechanisms of ~40Hz gamma rhythms generation (i.e. PING) be expressed in macroscale current source signals? </i></b> Lee & Jones used HNN's foundational neocortical neural modeling framework to show that PING mechanisms produce strong downward deflections that are distinct from alternative mechanisms, such as 40hz thalamic drive. They also showed that sharp waveform transitions can create spurious high frequency gamma oscillations coupled to lower frequency oscillations.
                         </p>
-                        <p>
-                            Jones SR, Pritchett DL, Stufflebeam SM, Sikora M, Hamalainen MS, Moore CI. (2009) Quantitative analysis and biophysically-realistic modeling of the MEG mu rhythm: rhythmogenesis and modulation of sensory evoked responses. J. of Neurophys; 102(6):3554-72.
-                        </p>
-                        
+
+
+                        <!---->
+
+
+
+
                         <h3>
                             Clinical Applications
                         </h3>
-                        <p>
-                            Khan S, Michmizos K, Tommerdahl M, Ganesan S, Kitzbichler MG, Zetino M, Kenet T. (2015). Somatosensory cortex functional connectivity abnormalities in autism show opposite trends, depending on direction and spatial scale. Brain : a journal of neurology, 138(Pt 5), 1394–1409. doi:10.1093/brain/awv043
+
+                        <!---->
+
+                        <h4>
+                        <a href="https://doi.org/10.1093/brain/awv043">Somatosensory cortex functional connectivity abnormalities in autism show opposite trends, depending on direction and spatial scale</a>
+                        </h4>
+                        <p class="authors">
+                            Khan S, Michmizos K, Tommerdahl M, Ganesan S, Kitzbichler MG, Zetino M, Garel KLA, Herbert MR, Hamalainen MS, Kenet T. <i>Brain</i> (2015)
                         </p>
-                        
+                        <p>
+                            <i><b>How do rhythmic sensory evoked somatosensory responses differ between typically developing children and those with Autism Spectrum Disorder? What are the cell and circuit mechanisms underlying these differences? </i></b> Recording MEG measured somatosensory response to 25Hz vibrotactile stimulation, Khan et al. found enhanced 25Hz and reduced 50Hz activity in ASD. They used HNN’s foundational model to test the theory that these changes were mediated by alterations in feedforward and feedback connections in ASD.
+                        </p>
+
+                        <!---->
+
+                         <h4>
+                        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2894272/">Transformations in oscillatory activity and evoked responses in primary somatosensory cortex in middle age: A combined computational neural modeling and MEG study</a>
+                        </h4>
+                        <p class="authors">
+                            Ziegler DA, Pritchett DL, Hosseini-Varnamkhasti P, Corkin S, Hamalainen MS, Moore CI, Jones SR. <i>NeuroImage</i> (2010)
+                        </p>
+                        <p>
+                            <i><b>How do the alpha and beta components of the somatosensory mu rhythm change with healthy aging? What are the cell and circuit mechanisms underlying these changes? </i></b> Ziegler et al. developed and used HNN's foundational neocortical neural modeling framework to make detailed predictions on how changes in feedforward (proximal) and feedback (distal) inputs that account for changes in neural dynamics in healthy aging.
+                        </p>
+
+                        <!---->
+
+
                         <h3>
                             Non-Invasive Brain Stimulation
                         </h3>
+                        <h4>
+                            <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2018.02117/full">A prospective study of the impact of transcranial alternating current stimulation on EEG correlates of somatosensory perception</a>
+                        </h4>
+                        <p class="authors">
+                            Sliva DD, Black CJ, Bowary P, Agrawal U, Santoyo JF, Philip N, Greenberg, BD, Moore CI, Jones SR. <i>Front Psychol</i> (2018)
+                        </p>
                         <p>
-                            Sliva DD, Black CJ, Bowary P. Agrawal U, Santoyo JF, Philip N, Greenberg, BD, Moore CI, Jones SR (2018) A prospective study of the impact of transcranial alternating current stimulation on EEG correlates of somatosensory perception, Front. Psych. Nov 20;9:2117. doi: 10.3389/fpsyg.2018.02117
+                            <i><b>Does ~10Hz alpha frequency tACS to somatosensory cortex entrain brain oscillations? Does it have an impact on subsequent threshold level tactile inputs? What are the cell and circuit mechanisms mediating these effects? </i></b> Sliva et al. showed that weak alpha frequency tACS does not entrain brain oscillations but does impact tactile evoked responses. They used HNN’s foundational model to show that the effects on the tactile evoked response could be mediated by selectively strengthening inhibitory synapses.
+
                         </p>
                         <br><br>
                     </div>
