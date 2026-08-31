@@ -30,6 +30,9 @@ topbar.outerHTML = `
                         <a href="contact.html">
                             Contact
                         </a>
+                        <a href="publications.html">
+                            Publications
+                        </a>
                     </div>
                     <!-- Right side of topbar-->
                     <div class="topbar-right">
@@ -53,10 +56,6 @@ topbar.outerHTML = `
                             <div class="dropdown-content">
                                 <a href="developers.html">
                                     Developers
-                                </a>
-                                <a href="publications.html">
-                                    <!-- <span class="external-icon"></span> -->
-                                    Publications
                                 </a>
                                 <a href="https://github.com/jonescompneurolab/hnn-core/discussions/categories/announcements">
                                     <!-- <span class="external-icon"></span> -->
@@ -93,11 +92,11 @@ topbar.outerHTML = `
                             <a href="contact.html">
                                 Contact
                             </a>
-                            <a href="developers.html">
-                                Developers
-                            </a>
                             <a href="publications.html">
                                 Publications
+                            </a>
+                            <a href="developers.html">
+                                Developers
                             </a>
                             <a href="https://github.com/jonescompneurolab/hnn-core/discussions/categories/announcements">
                                 Announcements
