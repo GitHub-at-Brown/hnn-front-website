@@ -1209,6 +1209,68 @@ body.dark-mode .name-tooltip {
   margin-top: 3rem;
 }
 
+.publications-toc {
+    margin: 1.5rem 0 2.5rem;
+    padding: 1.25rem 1.5rem 1.5rem;
+    background-color: #f6f8fa;
+    border-left: 4px solid var(--sidebar-purple);
+    border-radius: 6px;
+}
+
+.publications-toc-title {
+    margin: 0 0 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--sidebar-purple);
+}
+
+.publications-toc ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.publications-toc a {
+    display: inline-block;
+    padding: 0.35rem 0.9rem;
+    border: 1px solid var(--sidebar-purple);
+    border-radius: 999px;
+    color: var(--sidebar-purple);
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.publications-toc a:hover {
+    background-color: var(--sidebar-purple);
+    color: #fff;
+    text-decoration: none;
+}
+
+body.dark-mode .publications-toc {
+    background-color: #2a2a2a;
+    border-left-color: var(--light-purple);
+}
+
+body.dark-mode .publications-toc-title {
+    color: var(--light-purple);
+}
+
+body.dark-mode #content-wrapper .publications-toc a {
+    border-color: var(--light-purple);
+    color: var(--light-purple);
+}
+
+body.dark-mode .publications-toc a:hover {
+    background-color: var(--light-purple);
+    color: #1e1e1e;
+}
+
 
 #content .publications h2 {
     text-align: center;
@@ -1235,6 +1297,7 @@ body.dark-mode .name-tooltip {
 
 #content .publications h3 {
   margin-top: 3rem;
+  scroll-margin-top: calc(var(--topbar-height) + 1.5rem);
 }
 
 body.dark-mode #content .publications h3::after {
