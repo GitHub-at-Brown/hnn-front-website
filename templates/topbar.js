@@ -64,7 +64,7 @@ topbar.outerHTML = `
                             </div>
                         </div>
                         <div class="social-icons">
-                            <a aria-label="GitHub" href="https://github.com/jonescompneurolab/hnn-core" target="_blank">
+                            <a aria-label="GitHub" href="https://github.com/jonescompneurolab/hnn-core/discussions" target="_blank">
                                 <img alt="GitHub" src="https://raw.githubusercontent.com/jonescompneurolab/jones-website/master/images/frontpage/icons/github.png"/>
                             </a>
                             <a aria-label="BlueSky" href="https://bsky.app/profile/hnnsolver.bsky.social" target="_blank">
