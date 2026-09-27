@@ -27,8 +27,8 @@ topbar.outerHTML = `
                         <a href="https://jonescompneurolab.github.io/textbook/content/preface.html">
                             Documentation
                         </a>
-                        <a href="contact.html">
-                            Contact
+                        <a href="support.html">
+                            Support
                         </a>
                         <a href="publications.html">
                             Publications
